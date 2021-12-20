@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./4.js"></script>
+    <title>JS_Base</title>
+</head>
+<body>
+    <h1>Урок №2</h1>
+    <h2>Задание №6</h2>
+    <script>
+        'use strict'
+        let money = prompt('Какую сумму Вы будете ложить на счет?')
+        let currency = getCurrency(money)
+
+        alert('Ваша сумма в ' + money + ' ' + currency + ' ' + 'успешно зачислена!')
+
+        function getCurrency(money) {
+            let lastNumber = +money.toString()
+                                    .slice(-1)
+            if (lastNumber == 1)
+                return 'рубль'
+            else if (lastNumber > 1 && lastNumber < 5)
+                return 'рубля'
+            else
+                return 'рублей'
+        }
+    </script>
+</body>
+</html>
