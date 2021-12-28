@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Base</title>
+</head>
+<body>
+    <h1>Урок №4</h1>
+    <h2>Задание №1.2 (es6)</h2>
+    <script>
+        class Post {
+            constructor(author, text, date) {
+                this.author = author
+                this.text = text
+                this.date = date
+            }
+            edit = function(text) {
+                this.text = text
+            }
+        }
+
+        class AttachedPost extends Post {
+            constructor(author, text, date) {
+                super(author, text, date)
+                this.highlighted = false
+            }
+            makeTextHighlighted = function() {
+                this.highlighted = true
+            }
+        }
+
+        let item = new AttachedPost('venom', 'some_text', '12-26-2021')
+        console.log('Initial text: ' + item.text)
+        item.edit('changed_text')
+        item.makeTextHighlighted()
+        console.log('New text: ' + item.text)
+        console.log('Is text highlighted: ' + item.highlighted)
+    </script>
+</body>
+</html>
