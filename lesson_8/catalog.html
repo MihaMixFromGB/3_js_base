@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>catalog</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <nav class="header__box container">
+            <div>
+                <a class="header__logo--margin" href="./index.html">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+                <img src="./images/search.svg" alt="search">
+            </div>
+            <div class="header__toolbar">
+                <div class="header__toolbar__item header__menu">
+                    <label for="burger">&#9776;</label>
+                    <input type="checkbox" id="burger">
+                    <div class="header__menu__box">
+                        <div class="header__menu__close">
+                            <label for="burger">
+                                <span></span>
+                                <span></span>
+                            </label>
+                        </div>
+                        <nav class="header__menu__content">
+                            <h2>MENU</h2>
+                            <h3><a href="#">MAN</a></h3>
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Shirts</a></li>
+                            </ul>
+                            <h3><a href="#">WOMAN</a></h3>
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                            </ul>
+                            <h3><a href="#">KIDS</a></h3>
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Bags</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <a class="header__toolbar__item" href="./registration.html">
+                    <img src="./images/lk.svg" alt="lk">
+                </a>
+                <div class="header__toolbar__item header__cart">
+                    <a href="./cart.html">
+                        <img src="./images/cart.svg" alt="cart">
+                    </a>
+                    <div class="header__cart__goods">0</div>
+                    <div class="header__cart__summary">
+                        <div class="header__cart__summary__header">
+                            <div>Название товара</div>
+                            <div>Количество</div>
+                            <div>Цена за шт.</div>
+                            <div>Итого</div>
+                        </div>
+                        <div class="header__cart__summary__content"></div>
+                        <div class="header__cart__summary__total">
+                            Товаров в корзине на сумму: $<span>0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="title-path">
+            <div class="title-path__box container">
+                <h1 class="text-color">NEW ARRIVALS</h1>
+                <p><a href="#">HOME</a> / <a href="#">MEN</a> / <a href="#">NEW ARRIVALS</a></p>
+            </div>
+        </section>
+        <section class="products container">
+            <div class="products__toolbar">
+                <details class="products__toolbar__filter">
+                    <summary><span>FILTER</span>
+                        <svg>
+                            <use xlink:href="#filter" />
+                        </svg>
+                    </summary>
+                    <div class="products__toolbar__filter__content">
+                        <details>
+                            <summary>CATEGORY</summary>
+                            <ul>
+                                <li>Accessories</li>
+                                <li>Bags</li>
+                                <li>Denim</li>
+                                <li>Hoodies & Sweatshirts</li>
+                                <li>Jackets & Coats</li>
+                                <li>Polos</li>
+                                <li>Shirts</li>
+                                <li>Shoes</li>
+                                <li>Sweaters & Knits</li>
+                                <li>T-Shirts</li>
+                                <li>Tanks</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>BRAND</summary>
+                        </details>
+                        <details>
+                            <summary>DESIGNER</summary>
+                        </details>
+                    </div>
+                </details>
+                <div class="products__toolbar__selector">
+                    <details>
+                        <summary>TRENDING NOW
+                            <svg>
+                                <use xlink:href="#expand" />
+                            </svg>
+                        </summary>
+                    </details>
+                    <details>
+                        <summary>SIZE
+                            <svg>
+                                <use xlink:href="#expand" />
+                            </svg>
+                        </summary>
+                        <div>
+                            <ul>
+                                <li><input type="checkbox" id="xs"><label for="xs">XS</label></li>
+                                <li><input type="checkbox" id="s"><label for="s">S</label></li>
+                                <li><input type="checkbox" id="m"><label for="m">M</label></li>
+                                <li><input type="checkbox" id="l"><label for="l">L</label></li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>PRICE
+                            <svg>
+                                <use xlink:href="#expand" />
+                            </svg>
+                        </summary>
+                    </details>
+                </div>
+            </div>
+            <div class="products__box"></div>
+            <nav class="pagination">
+                <ul>
+                    <li>
+                        <a class="page-link page-arrow" href="#">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-link page-link-selected" href="#">1</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">2</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">3</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">4</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">5</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">6</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">...</a>
+                    </li>
+                    <li>
+                        <a class="text page-link" href="#">20</a>
+                    </li>
+                    <li>
+                        <a class="page-link page-arrow" href="#">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="features">
+            <div class="features__box container">
+                <article class="features__item">
+                    <div>
+                        <img src="./images/f_delivery.svg" alt="delivery">
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation
+                        innov tion with extensive models.</p>
+                </article>
+                <article class="features__item">
+                    <div>
+                        <img src="./images/f_sales.svg" alt="sales">
+                    </div>
+                    <h3>Sales & discounts</h3>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation
+                        innov tion with extensive models.</p>
+                </article>
+                <article class="features__item">
+                    <div>
+                        <img src="./images/f_assurance.svg" alt="assurance">
+                    </div>
+                    <h3>Quality assurance</h3>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation
+                        innov tion with extensive models.</p>
+                </article>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="subscribe__box container">
+                <div class="subscribe__info">
+                    <img src="./images/subscribe_photo.png" alt="photo">
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
+                            class="text-italic">a pulvinar purus condimentum</span>“</p>
+                </div>
+                <form class="subscribe__form">
+                    <h2>SUBSCRIBE</h2>
+                    <p>FOR OUR NEWLETTER AND PROMOTION</p>
+                    <input class="subscribe__form__email" type="email" placeholder="Enter Your Email"
+                            required pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                    <input class="subscribe__form__submit" type="submit" value="Subscribe">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__box container">
+            <p class="footer__copyright">&copy; 2021 Brand All Rights Reserved.</p>
+            <div class="footer__social">
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <svg display="none">
+        <symbol width="15" height="10" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg" id="filter">
+            <path
+                d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
+        </symbol>
+        <symbol width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg" id="expand">
+            <path
+                d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"/>
+        </symbol>
+    </svg>
+
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
