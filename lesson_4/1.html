@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Base</title>
+</head>
+<body>
+    <h1>Урок №4</h1>
+    <h2>Задание №1</h2>
+    <script>
+        class UserNumber {
+            constructor(units, tens, hundreds) {
+                this.units = units
+                this.tens = tens
+                this.hundreds = hundreds
+            }
+        }
+        function convertToUserNumber(num) {
+            if(!isAllowedNumber(num)) {
+                return new UserNumber(0, 0, 0)
+            }
+
+            num = +num
+            let hundreds = Math.floor(num / 100)
+            num -= hundreds*100
+            let tens = Math.floor(num / 10)
+            num -= tens*10
+            let units = num
+            
+            return new UserNumber(units, tens, hundreds)
+        }
+        function isAllowedNumber(num) {
+            num = +num
+            if(!Number.isInteger(num)) {
+                console.log('Переданное значение не является целым числом!')
+                return false
+            }
+            if(num > 999 || num < 0) {
+                console.log('Переданное число не входит в разрешенный диапазон!')
+                return false
+            }
+
+            return true
+        }
+
+        let num = prompt('Введите число от 0 до 999:')
+        let uNumber = convertToUserNumber(num)
+        console.log('Введенное число: ' + num)
+        console.log('Hundreds: ' + uNumber.hundreds)
+        console.log('Tens: ' + uNumber.tens)
+        console.log('Units: ' + uNumber.units)
+    </script>
+</body>
+</html>
